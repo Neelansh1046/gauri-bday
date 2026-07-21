@@ -1,0 +1,34 @@
+{
+  "birthday": {
+    "month": 7,
+    "day": 26,
+    "_comment": "month is 0-indexed: 0=Jan ... 7=August"
+  },
+  "sweetThoughts": [
+    "Because no matter how far apart we are, your smile instantly makes my entire day brighter. HBD Gauri!",
+    "Because you are literally sweeter than actual rasmalai, and I am the luckiest guy alive to call you mine.",
+    "Because of the way you laugh at my terrible jokes. Never stop doing that.",
+    "Because even through a phone screen, you feel closer to me than anyone else ever could.",
+    "Because of your beautiful, kind heart. You inspire me to be a better person every single day.",
+    "Just a reminder: I love you to the moon and back, Gauri. Today is all about you."
+  ],
+  "memories": [
+    { "src": "images/memory-1.jpg", "alt": "A memory of Gauri and me on a video call", "caption": "Our late night VCs 🥹" },
+    { "src": "images/memory-2.jpg", "alt": "A cute photo of Gauri", "caption": "The prettiest smile in the universe" },
+    { "src": "images/memory-3.jpg", "alt": "A cute photo of Gauri", "caption": "Look at you being a cutie" },
+    { "src": "images/memory-4.jpg", "alt": "A screenshot from a video call together", "caption": "Miles apart, still side by side" },
+    { "src": "images/memory-5.jpg", "alt": "A cute photo of Gauri", "caption": "This one lives in my head rent-free" },
+    { "src": "images/memory-6.jpg", "alt": "A cute photo of Gauri", "caption": "My favorite kind of chaos" }
+  ],
+  "jukebox": {
+    "trackTitle": "Our Song",
+    "trackSubtitle": "Simulated player — press play",
+    "durationSeconds": 210,
+    "spotifyEmbedUrl": ""
+  },
+  "finalSurprise": {
+    "buttonText": "Your final physical gift, Gauri...",
+    "message": "I wish I could put this on you myself right now, but until I can... check your doorstep! Wear it and remember I'm always with you. Happy Birthday, my beautiful Rasmalai. I love you! 💖",
+    "jewelryImage": "images/jewelry.jpg"
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Favorite Views</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<div id="particle-layer" aria-hidden="true"></div>
+
+<div id="lock-overlay">
+  <div class="lock-card">
+    <span class="lock-emoji">🔒🌙</span>
+    <h2>Ah-ah-ah! No peeking yet, Rasmalai.</h2>
+    <p>Good things come to those who wait! Let the timer tick down... 😉✨</p>
+  </div>
+</div>
+
+<nav class="slide-nav">
+  <a href="index.html">Home</a>
+  <a href="thoughts.html">Sweet Thoughts</a>
+  <a href="memories.html" class="active">Memories</a>
+  <a href="jukebox.html">Jukebox</a>
+  <a href="surprise.html">Final Surprise</a>
+</nav>
+
+<div class="reveal-content">
+  <section class="section section--alt">
+    <div class="section-head">
+      <div class="eyebrow">Our memory vault</div>
+      <h2>My Favorite Views</h2>
+      <p>A collection of your cutest pictures and our late-night FaceTime/Snapchat video calls. Every second with you is my favorite memory.</p>
+      <svg class="cloud-divider" viewBox="0 0 220 40" aria-hidden="true">
+        <ellipse cx="40" cy="25" rx="22" ry="14"></ellipse>
+        <ellipse cx="70" cy="18" rx="26" ry="18"></ellipse>
+        <ellipse cx="105" cy="25" rx="24" ry="15"></ellipse>
+        <ellipse cx="140" cy="18" rx="22" ry="16"></ellipse>
+        <ellipse cx="170" cy="26" rx="20" ry="12"></ellipse>
+      </svg>
+    </div>
+
+    <!-- Populated from data/content.json by js/gallery.js -->
+    <div class="memory-grid" id="memory-grid"></div>
+  </section>
+
+  <div class="slide-footer-nav">
+    <a href="thoughts.html">← Sweet Thoughts</a>
+    <a href="jukebox.html">Jukebox →</a>
+  </div>
+  <footer class="page-footer">Made with every bit of my heart, for my <span class="script">Rasmalai</span>. 🌙</footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/lock.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

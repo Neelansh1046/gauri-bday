@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Soundtrack to Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<div id="particle-layer" aria-hidden="true"></div>
+
+<div id="lock-overlay">
+  <div class="lock-card">
+    <span class="lock-emoji">🔒🌙</span>
+    <h2>Ah-ah-ah! No peeking yet, Rasmalai.</h2>
+    <p>Good things come to those who wait! Let the timer tick down... 😉✨</p>
+  </div>
+</div>
+
+<nav class="slide-nav">
+  <a href="index.html">Home</a>
+  <a href="thoughts.html">Sweet Thoughts</a>
+  <a href="memories.html">Memories</a>
+  <a href="jukebox.html" class="active">Jukebox</a>
+  <a href="surprise.html">Final Surprise</a>
+</nav>
+
+<div class="reveal-content">
+  <section class="section">
+    <div class="section-head">
+      <div class="eyebrow">Our jukebox</div>
+      <h2>The Soundtrack to Us</h2>
+      <p>A collection of songs that make me think of you every single time they play.</p>
+      <svg class="cloud-divider" viewBox="0 0 220 40" aria-hidden="true">
+        <ellipse cx="40" cy="25" rx="22" ry="14"></ellipse>
+        <ellipse cx="70" cy="18" rx="26" ry="18"></ellipse>
+        <ellipse cx="105" cy="25" rx="24" ry="15"></ellipse>
+        <ellipse cx="140" cy="18" rx="22" ry="16"></ellipse>
+        <ellipse cx="170" cy="26" rx="20" ry="12"></ellipse>
+      </svg>
+    </div>
+
+    <div class="jukebox">
+      <div class="jukebox-track">
+        <div class="jukebox-art">🎵</div>
+        <div class="jukebox-meta">
+          <div class="title" id="jukebox-title">Our Song</div>
+          <div class="artist" id="jukebox-subtitle">Simulated player — press play</div>
+        </div>
+        <button class="play-btn" id="play-btn" aria-label="Play or pause">▶</button>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="progress-time"><span id="progress-current">0:00</span><span id="progress-total">3:30</span></div>
+
+      <!-- Real Spotify embed renders here automatically if you set
+           "spotifyEmbedUrl" in data/content.json -->
+      <div class="spotify-slot" id="spotify-slot"></div>
+    </div>
+  </section>
+
+  <div class="slide-footer-nav">
+    <a href="memories.html">← Memories</a>
+    <a href="surprise.html">Final Surprise →</a>
+  </div>
+  <footer class="page-footer">Made with every bit of my heart, for my <span class="script">Rasmalai</span>. 🌙</footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/lock.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/jukebox.js"></script>
+</body>
+</html>

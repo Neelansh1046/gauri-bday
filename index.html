@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday, Gauri 🌙</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<div id="particle-layer" aria-hidden="true"></div>
+
+<div id="lock-overlay">
+  <div class="lock-card">
+    <span class="lock-emoji">🔒🌙</span>
+    <h2>Ah-ah-ah! No peeking yet, Rasmalai.</h2>
+    <p>Good things come to those who wait! Let the timer tick down... 😉✨</p>
+  </div>
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<nav class="slide-nav">
+  <a href="index.html" class="active">Home</a>
+  <a href="thoughts.html">Sweet Thoughts</a>
+  <a href="memories.html">Memories</a>
+  <a href="jukebox.html">Jukebox</a>
+  <a href="surprise.html">Final Surprise</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-eyebrow">A little something from far away</div>
+  <h1>Happy Birthday, Gauri! 🌙</h1>
+  <p class="subtitle">Celebrating my absolute favorite person (and the sweetest <span class="script">Rasmalai</span> in the world) from miles away.</p>
+
+  <!-- Distance illustration: two pins joined by a dashed flight path -->
+  <svg class="distance-map" viewBox="0 0 320 110" aria-hidden="true">
+    <path class="flight-path" d="M35,85 Q160,5 285,85" />
+    <circle class="pin" cx="35" cy="85" r="7"></circle>
+    <circle class="pin" cx="285" cy="85" r="7"></circle>
+    <text class="plane" x="145" y="42" font-size="24">✈️</text>
+  </svg>
+  <div class="same-sky-note">wherever you are, we're under the same sky</div>
+
+  <div class="countdown" id="countdown" aria-live="polite">
+    <div class="unit"><span class="num" id="cd-days">00</span><span class="label">Days</span></div>
+    <div class="unit"><span class="num" id="cd-hours">00</span><span class="label">Hours</span></div>
+    <div class="unit"><span class="num" id="cd-mins">00</span><span class="label">Mins</span></div>
+    <div class="unit"><span class="num" id="cd-secs">00</span><span class="label">Secs</span></div>
+  </div>
+
+  <div class="scroll-hint">↓ Head to the next slide, my love ↓</div>
+</header>
+
+<div class="reveal-content">
+  <div class="slide-footer-nav">
+    <span></span>
+    <a href="thoughts.html">Sweet Thoughts →</a>
+  </div>
+  <footer class="page-footer">Made with every bit of my heart, for my <span class="script">Rasmalai</span>. 🌙</footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/lock.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/countdown.js"></script>
+</body>
+</html>
