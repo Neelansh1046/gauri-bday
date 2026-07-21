@@ -187,6 +187,13 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
 .distance-map .plane{
   animation:flyAlong 3.5s ease-in-out infinite;
 }
+.distance-map .city-label{
+  font-family:var(--display);
+  font-size:10px;
+  font-weight:600;
+  fill:#fff;
+  opacity:0.9;
+}
 @keyframes flyAlong{
   0%,100%{ transform:translate(0,0); }
   50%{ transform:translate(4px,-6px); }
