@@ -331,6 +331,7 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
   width:220px;
   max-width:60vw;
   height:auto;
+  border-radius:20px;
   filter:drop-shadow(0 14px 20px rgba(80,70,130,0.25));
   animation:bobFloat 3.4s ease-in-out infinite;
 }
