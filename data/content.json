@@ -1,7 +1,7 @@
 {
   "birthday": {
-    "month": 6,
-    "day": 21,
+    "month": 7,
+    "day": 26,
     "_comment": "month is 0-indexed: 0=Jan ... 7=August"
   },
   "sweetThoughts": [
@@ -12,19 +12,25 @@
     "Because of your beautiful, kind heart. You inspire me to be a better person every single day.",
     "Just a reminder: I love you to the moon and back, Gauri. Today is all about you."
   ],
- "memories": [
-  { "src": "images/memory-1.jpg", "alt": "Gauri as a kid", "caption": "Bachpan ki Gauri 🥹" },
-  { "src": "images/memory-2.jpg", "alt": "Gauri as a kid", "caption": "Already this cute back then" },
-  { "src": "images/memory-3.jpg", "alt": "A recent cute photo of Gauri", "caption": "The prettiest smile in the universe" },
-  { "src": "images/memory-4.jpg", "alt": "A recent cute photo of Gauri", "caption": "My favorite kind of chaos" },
-  { "src": "images/memory-5.jpg", "alt": "A screenshot from a video call together", "caption": "Our video call moments" },
-  { "src": "images/memory-6.jpg", "alt": "A screenshot from a video call together", "caption": "Miles apart, still side by side" }
-],
+  "memories": [
+    { "src": "images/memory-1.jpg", "alt": "Gauri as a kid", "caption": "Bachpan ki Gauri 🥹" },
+    { "src": "images/memory-2.jpg", "alt": "Gauri as a kid", "caption": "Already this cute back then" },
+    { "src": "images/memory-3.jpg", "alt": "A recent cute photo of Gauri", "caption": "The prettiest smile in the universe" },
+    { "src": "images/memory-4.jpg", "alt": "A recent cute photo of Gauri", "caption": "My favorite kind of chaos" },
+    { "src": "images/memory-5.jpg", "alt": "A screenshot from a video call together", "caption": "Our video call moments" },
+    { "src": "images/memory-6.jpg", "alt": "A screenshot from a video call together", "caption": "Miles apart, still side by side" }
+  ],
   "jukebox": {
     "trackTitle": "Our Song",
     "trackSubtitle": "Simulated player — press play",
     "durationSeconds": 210,
     "spotifyEmbedUrl": ""
+  },
+  "passwordGate": {
+    "password": "1234",
+    "hint": "enter the code to unlock a little secret 🤫",
+    "successTitle": "You are mine, and I love you so much 💕",
+    "successSubtitle": "Now let's see what's waiting for you..."
   },
   "finalSurprise": {
     "buttonText": "Your final physical gift, Gauri...",
