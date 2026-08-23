@@ -12,14 +12,14 @@
     "Because of your beautiful, kind heart. You inspire me to be a better person every single day.",
     "Just a reminder: I love you to the moon and back, Gauri. Today is all about you."
   ],
-  "memories": [
-    { "src": "images/memory-1.jpg", "alt": "A memory of Gauri and me on a video call", "caption": "Our late night VCs 🥹" },
-    { "src": "images/memory-2.jpg", "alt": "A cute photo of Gauri", "caption": "The prettiest smile in the universe" },
-    { "src": "images/memory-3.jpg", "alt": "A cute photo of Gauri", "caption": "Look at you being a cutie" },
-    { "src": "images/memory-4.jpg", "alt": "A screenshot from a video call together", "caption": "Miles apart, still side by side" },
-    { "src": "images/memory-5.jpg", "alt": "A cute photo of Gauri", "caption": "This one lives in my head rent-free" },
-    { "src": "images/memory-6.jpg", "alt": "A cute photo of Gauri", "caption": "My favorite kind of chaos" }
-  ],
+ "memories": [
+  { "src": "images/memory-1.jpg", "alt": "Gauri as a kid", "caption": "Bachpan ki Gauri 🥹" },
+  { "src": "images/memory-2.jpg", "alt": "Gauri as a kid", "caption": "Already this cute back then" },
+  { "src": "images/memory-3.jpg", "alt": "A recent cute photo of Gauri", "caption": "The prettiest smile in the universe" },
+  { "src": "images/memory-4.jpg", "alt": "A recent cute photo of Gauri", "caption": "My favorite kind of chaos" },
+  { "src": "images/memory-5.jpg", "alt": "A screenshot from a video call together", "caption": "Our video call moments" },
+  { "src": "images/memory-6.jpg", "alt": "A screenshot from a video call together", "caption": "Miles apart, still side by side" }
+],
   "jukebox": {
     "trackTitle": "Our Song",
     "trackSubtitle": "Simulated player — press play",
