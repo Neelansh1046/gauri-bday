@@ -53,6 +53,11 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
   font-size:0.72rem; color:#9A7FC4; font-weight:600;
 }
 .script{ font-family:var(--script); font-size:1.25em; color:#B85C8A; }
+.script{ font-family:var(--script); font-size:1.25em; color:#B85C8A; }
+.hero .script{
+  color:#FFE9A8;
+  text-shadow:0 2px 10px rgba(80,40,70,0.35);
+}
 
 /* ================================================================
    SLIDE NAVIGATION — a floating pastel pill bar
