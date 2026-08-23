@@ -9,8 +9,8 @@
   --sky-deep:     #A9C6F0;   /* upper sky, periwinkle */
   --sky-mid:      #E3C6EC;   /* lavender-pink transition */
   --sky-horizon:  #FFD9C2;   /* warm peach horizon glow */
-   --hero-pink-deep:  #C15B95;  /* rich rose, top of hero */
-   --hero-pink-mid:   #E58AB5;  /* rose-pink */
+  --hero-pink-deep:  #C15B95;  /* rich rose, top of hero */
+  --hero-pink-mid:   #E58AB5;  /* rose-pink */
   --hero-pink-light: #F49BC1;  /* soft blush, bottom of hero */
   --cream:        #FFFBF6;   /* page background */
   --card:         #FFFFFF;
@@ -53,7 +53,6 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
   font-family:var(--sans); letter-spacing:0.18em; text-transform:uppercase;
   font-size:0.72rem; color:#FFE9A8; font-weight:600;
 }
-.script{ font-family:var(--script); font-size:1.25em; color:#B85C8A; }
 .script{ font-family:var(--script); font-size:1.25em; color:#B85C8A; }
 .hero .script{
   color:#FFE9A8;
@@ -198,7 +197,7 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
 }
 .distance-map .city-label{
   font-family:var(--display);
-  font-size:10px;
+  font-size:11px;
   font-weight:600;
   fill:#fff;
   opacity:0.9;
@@ -231,6 +230,7 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
   display:block; margin-top:5px;
 }
 .scroll-hint{ margin-top:44px; font-size:0.85rem; color:#fff; opacity:0.9; letter-spacing:0.04em; text-shadow:0 2px 10px rgba(80,40,70,0.3); }
+
 /* ================================================================
    LOCK OVERLAY
    ================================================================ */
@@ -337,9 +337,10 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
 .spotify-slot{ margin-top:28px; border-radius:16px; overflow:hidden; }
 
 /* ================================================================
-   FINAL SURPRISE
+   CAT + BOUQUET (final surprise page, above the lamp/cake)
    ================================================================ */
-.cat-bouquet-card{ display:flex; justify-content:center; }
+.bouquet-section .section-head p{ max-width:520px; }
+.cat-bouquet-card{ display:flex; justify-content:center; margin-top:8px; }
 .cat-bouquet{
   width:220px;
   max-width:60vw;
@@ -352,38 +353,80 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
   0%,100%{ transform:translateY(0); }
   50%{ transform:translateY(-8px); }
 }
-.final-surprise{ text-align:center; }
-.glow-btn{
-  background:linear-gradient(135deg, var(--gold), #E9A0C4);
-  animation:pulseGlow 2.6s ease-in-out infinite;
+
+/* ================================================================
+   LAMP-PULL + CAKE-CUT SURPRISE
+   ================================================================ */
+.lamp-stage{ text-align:center; margin-bottom:10px; }
+.lamp-svg{ width:130px; height:auto; margin:0 auto; display:block; }
+#lamp-pull{
+  cursor:pointer;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:transform 0.15s ease;
 }
-@keyframes pulseGlow{
-  0%,100%{ box-shadow:0 0 0 0 rgba(255,216,115,0.5); }
-  50%{ box-shadow:0 0 0 18px rgba(255,216,115,0); }
+#lamp-pull:hover{ transform:translateY(4px); }
+#lamp-pull.pulled{ animation:knobPull 0.6s ease; }
+@keyframes knobPull{
+  0%{ transform:translateY(0); }
+  35%{ transform:translateY(24px); }
+  60%{ transform:translateY(10px); }
+  100%{ transform:translateY(0); }
 }
-#jewelry-modal{
-  position:fixed; inset:0; z-index:70; display:none; align-items:center; justify-content:center;
-  padding:24px; background:rgba(51,49,78,0.55); backdrop-filter:blur(6px);
+#lamp-bulb{ transition:fill 0.4s ease, filter 0.4s ease; }
+#lamp-bulb.lit{ fill:#FFD873; filter:drop-shadow(0 0 16px rgba(255,216,115,0.95)); }
+.lamp-hint, .cake-hint{
+  font-family:var(--display); font-size:0.85rem; color:var(--indigo-soft);
+  margin-top:6px; transition:opacity 0.4s ease;
 }
-#jewelry-modal.open{ display:flex; }
-.modal-card{
-  position:relative; background:var(--cream); border-radius:var(--radius-lg); max-width:480px;
-  width:100%; padding:clamp(28px, 6vw, 48px); text-align:center;
-  box-shadow:0 30px 80px -20px rgba(0,0,0,0.45); overflow:hidden;
+
+.cake-stage{
+  text-align:center;
+  margin-top:6px;
+  opacity:0;
+  transform:translateY(40px) scale(0.9);
+  transition:opacity 0.6s ease, transform 0.6s cubic-bezier(.34,1.56,.64,1);
 }
-.modal-close{ position:absolute; top:16px; right:18px; background:none; border:none; font-size:1.4rem; color:var(--indigo-soft); cursor:pointer; z-index:2; }
-.jewelry-box-placeholder{
-  width:100%; aspect-ratio:1/1; max-width:260px; margin:0 auto 22px; border-radius:24px;
-  background:linear-gradient(135deg, var(--blush), var(--gold));
-  display:flex; align-items:center; justify-content:center; font-size:3rem; box-shadow:var(--shadow);
-  overflow:hidden;
+.cake-stage.visible{ opacity:1; transform:translateY(0) scale(1); }
+.cake-svg{
+  width:220px; max-width:70vw; height:auto;
+  touch-action:pan-y; cursor:grab; margin-top:6px;
 }
-.jewelry-box-placeholder img{ width:100%; height:100%; object-fit:cover; }
-.modal-card p{ font-family:var(--display); font-size:1.15rem; font-weight:500; color:var(--indigo); position:relative; z-index:2; }
-.modal-sparkle{ position:absolute; font-size:1rem; opacity:0.8; animation:sparkleFloat 3s ease-in-out infinite; pointer-events:none; }
-@keyframes sparkleFloat{
-  0%,100%{ transform:translateY(0) scale(1); opacity:0.5; }
-  50%{ transform:translateY(-14px) scale(1.2); opacity:1; }
+#cake-left, #cake-right{
+  transition:transform 0.6s cubic-bezier(.34,1.56,.64,1);
+  transform-box: fill-box;
+}
+#cake-left.cut{ transform:translate(-18px,4px) rotate(-8deg); }
+#cake-right.cut{ transform:translate(18px,4px) rotate(8deg); }
+#cake-heart{ transition:opacity 0.6s ease 0.3s; }
+
+.bday-message{
+  margin-top:22px;
+  display:flex; flex-wrap:wrap; justify-content:center; gap:8px 10px;
+  opacity:0; pointer-events:none; transition:opacity 0.2s ease;
+  padding:0 12px;
+}
+.bday-message.show{ opacity:1; pointer-events:auto; }
+.pop-word{
+  font-family:var(--display); font-weight:700;
+  font-size:clamp(1.2rem, 4.2vw, 1.9rem);
+  color:var(--indigo);
+  display:inline-block;
+  transform:scale(0);
+  opacity:0;
+}
+.bday-message.show .pop-word{
+  animation:popIn 0.6s cubic-bezier(.34,1.56,.64,1) forwards;
+  animation-delay:var(--d);
+}
+.pop-word.script-word{ font-family:var(--script); color:#B85C8A; font-size:clamp(1.5rem, 5vw, 2.3rem); }
+@keyframes popIn{
+  0%{ transform:scale(0) rotate(-8deg); opacity:0; }
+  60%{ transform:scale(1.25) rotate(4deg); opacity:1; }
+  100%{ transform:scale(1) rotate(0deg); opacity:1; }
+}
+@media (prefers-reduced-motion: reduce){
+  .bday-message.show .pop-word{ animation:none; transform:scale(1); opacity:1; }
 }
 
 footer.page-footer{ text-align:center; padding:60px 24px 40px; color:var(--indigo-soft); font-size:0.9rem; position:relative; z-index:3; }
