@@ -1,8 +1,8 @@
 {
   "birthday": {
     "month": 7,
-    "day": 26,
-    "_comment": "month is 0-indexed: 0=Jan ... 7=August"
+    "day": 22,
+    "_comment": "month is 0-indexed: 0=Jan ... 7=August. TEMP set to yesterday for preview — change back to 26 before sending!"
   },
   "sweetThoughts": [
     "Because no matter how far apart we are, your smile instantly makes my entire day brighter. HBD Gauri!",
