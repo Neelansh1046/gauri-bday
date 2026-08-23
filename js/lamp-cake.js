@@ -1,27 +1,40 @@
 /* ================================================================
    The lamp-and-cake surprise:
    1. She taps/clicks the pink knob to "pull" the lamp string.
-   2. The bulb glows, and the cake bounces into view.
-   3. She swipes across the cake to "cut" it — it splits open,
-      sparkles burst out, and a bouncy birthday message pops in.
+   2. The bulb glows, and the cake (your own photo) bounces into view.
+   3. She swipes across the cake to "cut" it — the photo splits in
+      half, a heart shows through the middle, sparkles burst out,
+      and a bouncy birthday message pops in.
    ================================================================ */
 (function initLampCake(){
-  const pull       = document.getElementById('lamp-pull');
-  const bulb       = document.getElementById('lamp-bulb');
-  const lampHint   = document.getElementById('lamp-hint');
-  const cakeStage  = document.getElementById('cake-stage');
-  const cakeSvg    = document.getElementById('cake-svg');
-  const cakeLeft   = document.getElementById('cake-left');
-  const cakeRight  = document.getElementById('cake-right');
-  const cakeHeart  = document.getElementById('cake-heart');
-  const cakeHint   = document.getElementById('cake-hint');
-  const message    = document.getElementById('bday-message');
+  const pull        = document.getElementById('lamp-pull');
+  const bulb        = document.getElementById('lamp-bulb');
+  const lampHint     = document.getElementById('lamp-hint');
+  const cakeStage      = document.getElementById('cake-stage');
+  const cakeWrap         = document.getElementById('cake-photo-wrap');
+  const cakeLeft            = document.getElementById('cake-photo-left');
+  const cakeRight             = document.getElementById('cake-photo-right');
+  const cakeHeart               = document.getElementById('cake-reveal-heart');
+  const cakeHint                  = document.getElementById('cake-hint');
+  const message                     = document.getElementById('bday-message');
   if (!pull) return; // this page isn't loaded
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   let pulled = false;
   let cut = false;
+
+  const reveal_btn_ = document.getElementById('reveal-lamp-btn');
+  const lampSection_ = document.getElementById('lamp-cake-section');
+  if (reveal_btn_ && lampSection_) {
+    reveal_btn_.addEventListener('click', () => {
+      lampSection_.classList.add('show');
+      reveal_btn_.style.display = 'none';
+      setTimeout(() => {
+        lampSection_.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    });
+  }
 
   /* ---------- Step 1: pull the string ---------- */
   function pullLamp(){
@@ -52,26 +65,26 @@
     const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
     const delta = endX - startX;
     startX = null;
-    if (Math.abs(delta) > 45) cutCake();
+    if (Math.abs(delta) > 35) cutCake();
   }
 
-  cakeSvg.addEventListener('pointerdown', onStart);
-  cakeSvg.addEventListener('pointerup', onEnd);
-  cakeSvg.addEventListener('touchstart', onStart, { passive: true });
-  cakeSvg.addEventListener('touchend', onEnd);
+  cakeWrap.addEventListener('pointerdown', onStart);
+  cakeWrap.addEventListener('pointerup', onEnd);
+  cakeWrap.addEventListener('touchstart', onStart, { passive: true });
+  cakeWrap.addEventListener('touchend', onEnd);
   // Fallback: a plain click/tap also cuts it, in case swipe detection
   // doesn't register on a particular device.
-  cakeSvg.addEventListener('click', () => { if (!cut) cutCake(); });
+  cakeWrap.addEventListener('click', () => { if (!cut) cutCake(); });
 
   function cutCake(){
     if (cut) return;
     cut = true;
     cakeLeft.classList.add('cut');
     cakeRight.classList.add('cut');
-    cakeHeart.style.opacity = '1';
+    cakeHeart.classList.add('show');
     cakeHint.style.opacity = '0';
 
-    const rect = cakeSvg.getBoundingClientRect();
+    const rect = cakeWrap.getBoundingClientRect();
     sparkleBurst(rect.left + rect.width / 2, rect.top + rect.height / 2);
 
     setTimeout(() => message.classList.add('show'), 400);
