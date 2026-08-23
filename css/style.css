@@ -379,7 +379,7 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
   50%{ transform:translateY(-14px) scale(1.2); opacity:1; }
 }
 
-footer.page-footer{ text-align:center; padding:60px 24px 40px; color:#fff; opacity:0.85; font-size:0.9rem; position:relative; z-index:3; text-shadow:0 2px 8px rgba(80,40,70,0.25); }
+footer.page-footer{ text-align:center; padding:60px 24px 40px; color:var(--indigo-soft); font-size:0.9rem; position:relative; z-index:3; }
 
 @media (prefers-reduced-motion: reduce){
   *, *::before, *::after{
