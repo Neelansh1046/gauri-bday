@@ -26,6 +26,7 @@
     "audioUrl": "song.mp3",
     "durationSeconds": 374,
     "spotifyEmbedUrl": ""
+  }
   },
   "passwordGate": {
     "password": "1234",
