@@ -22,7 +22,8 @@
   ],
   "jukebox": {
     "trackTitle": "Our Song",
-    "trackSubtitle": "Simulated player — press play",
+    "trackSubtitle": "I LOVE YOU SO MUCH",
+    "audioUrl": "song.mp3",
     "durationSeconds": 210,
     "spotifyEmbedUrl": ""
   },
