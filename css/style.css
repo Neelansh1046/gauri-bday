@@ -285,7 +285,14 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
    ================================================================ */
 .memory-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
 @media (max-width:720px){ .memory-grid{ grid-template-columns:repeat(2, 1fr); gap:16px; } }
-@media (max-width:480px){ .memory-grid{ grid-template-columns:repeat(1, 1fr); gap:20px; max-width:340px; margin:0 auto; } }
+@media (max-width:480px){ 
+  .memory-grid{ 
+    grid-template-columns:repeat(2, 1fr); 
+    gap:12px; 
+    max-width:100%; 
+    margin:0 auto; 
+  } 
+}
 .memory-tile{
   position:relative; border-radius:var(--radius-md); overflow:hidden;
   box-shadow:0 12px 28px -14px rgba(80,70,130,0.35); cursor:pointer;
@@ -305,7 +312,7 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
   line-height:1.3;
 }
 @media (max-width:480px){
-  .memory-caption{ font-size:0.9rem; padding:10px 8px 16px; }
+  .memory-caption{ font-size:0.8rem; padding:8px 4px 12px; }
 }
 
 /* ---------- Tap-to-enlarge polaroid popup ---------- */
