@@ -1,8 +1,8 @@
 {
   "birthday": {
     "month": 7,
-    "day": 22,
-    "_comment": "month is 0-indexed: 0=Jan ... 7=August. TEMP set to yesterday for preview — change back to 26 before sending!"
+    "day": 24,
+    "_comment": "month is 0-indexed: 7=August. Set day to 24 to keep unlocked for preview. Change back to 26 before sending!"
   },
   "sweetThoughts": [
     "Because no matter how far apart we are, your smile instantly makes my entire day brighter. HBD Gauri!",
@@ -26,7 +26,6 @@
     "audioUrl": "song.mp3",
     "durationSeconds": 374,
     "spotifyEmbedUrl": ""
-  }
   },
   "passwordGate": {
     "password": "1234",
