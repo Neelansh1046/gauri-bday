@@ -13,12 +13,12 @@
     "Just a reminder: I love you to the moon and back, Gauri. Today is all about you."
   ],
   "memories": [
-    { "src": "images/memory-1.jpg", "alt": "Gauri as a kid", "caption": "Bachpan ki Gauri 🥹" },
-    { "src": "images/memory-2.jpg", "alt": "Gauri as a kid", "caption": "Already this cute back then" },
-    { "src": "images/memory-3.jpg", "alt": "A recent cute photo of Gauri", "caption": "The prettiest smile in the universe" },
-    { "src": "images/memory-4.jpg", "alt": "A recent cute photo of Gauri", "caption": "My favorite kind of chaos" },
-    { "src": "images/memory-5.jpg", "alt": "A screenshot from a video call together", "caption": "Our video call moments" },
-    { "src": "images/memory-6.jpg", "alt": "A screenshot from a video call together", "caption": "Miles apart, still side by side" }
+    { "src": "memory-1.jpg", "alt": "Gauri as a kid", "caption": "Bachpan ki Gauri 🥹" },
+    { "src": "memory-2.jpg", "alt": "Gauri as a kid", "caption": "Already this cute back then" },
+    { "src": "memory-3.jpg", "alt": "A recent cute photo of Gauri", "caption": "The prettiest smile in the universe" },
+    { "src": "memory-4.jpg", "alt": "A recent cute photo of Gauri", "caption": "My favorite kind of chaos" },
+    { "src": "memory-5.jpg", "alt": "A screenshot from a video call together", "caption": "Our video call moments" },
+    { "src": "memory-6.jpg", "alt": "A screenshot from a video call together", "caption": "Miles apart, still side by side" }
   ],
   "jukebox": {
     "trackTitle": "Our Song",
@@ -35,6 +35,6 @@
   "finalSurprise": {
     "buttonText": "Your final physical gift, Gauri...",
     "message": "I wish I could put this on you myself right now, but until I can... check your doorstep! Wear it and remember I'm always with you. Happy Birthday, my beautiful Rasmalai. I love you! 💖",
-    "jewelryImage": "images/jewelry.jpg"
+    "jewelryImage": "jewelry.jpg"
   }
 }
