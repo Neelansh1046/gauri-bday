@@ -1,25 +1,21 @@
 /* ================================================================
    DESIGN TOKENS — Dreamy Pastel Sky
-   The idea: no matter the distance, you're under the same sky.
-   Palette moves like dusk — periwinkle blue fading into lavender,
-   blush pink, and warm peach, with soft cream cards and a
-   deep dusky-indigo for text (never pure black).
    ================================================================ */
 :root{
-  --sky-deep:     #A9C6F0;   /* upper sky, periwinkle */
-  --sky-mid:      #E3C6EC;   /* lavender-pink transition */
-  --sky-horizon:  #FFD9C2;   /* warm peach horizon glow */
-  --hero-pink-deep:  #C15B95;  /* rich rose, top of hero */
-  --hero-pink-mid:   #E58AB5;  /* rose-pink */
-  --hero-pink-light: #F49BC1;  /* soft blush, bottom of hero */
-  --cream:        #FFFBF6;   /* page background */
+  --sky-deep:     #A9C6F0;
+  --sky-mid:      #E3C6EC;
+  --sky-horizon:  #FFD9C2;
+  --hero-pink-deep:  #C15B95;
+  --hero-pink-mid:   #E58AB5;
+  --hero-pink-light: #F49BC1;
+  --cream:        #FFFBF6;
   --card:         #FFFFFF;
   --lavender:     #C9B6E4;
   --blush:        #FFD3E0;
   --peach:        #FFB98A;
   --gold:         #FFD873;
-  --indigo:       #33314E;   /* primary text, dusky navy */
-  --indigo-soft:  #6E6B8C;   /* secondary text */
+  --indigo:       #33314E;
+  --indigo-soft:  #6E6B8C;
   --shadow:       0 20px 55px -18px rgba(80, 70, 130, 0.28);
   --radius-lg:    28px;
   --radius-md:    20px;
@@ -60,7 +56,7 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
 }
 
 /* ================================================================
-   SLIDE NAVIGATION — a floating pastel pill bar
+   SLIDE NAVIGATION
    ================================================================ */
 .slide-nav{
   position:sticky;
@@ -106,11 +102,6 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
 }
 .slide-footer-nav a:hover{ text-decoration:underline; }
 
-/* ================================================================
-   SIGNATURE ELEMENT — the cloud divider
-   A soft scalloped cloud shape replaces plain hairlines between
-   sections, echoing the sky theme.
-   ================================================================ */
 .cloud-divider{
   display:block;
   width:220px;
@@ -121,7 +112,7 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
 .cloud-divider path{ fill:var(--card); }
 
 /* ================================================================
-   AMBIENT SKY LAYER — twinkling stars + drifting clouds
+   AMBIENT SKY LAYER
    ================================================================ */
 #particle-layer{ position:fixed; inset:0; pointer-events:none; z-index:2; overflow:hidden; }
 .star{
@@ -157,7 +148,7 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
 .section-head p{ color:#fff; opacity:0.92; font-size:1.05rem; text-shadow:0 2px 8px rgba(80,40,70,0.3); }
 
 /* ================================================================
-   HERO — dusk sky gradient with drifting clouds + connecting stars
+   HERO
    ================================================================ */
 .hero{
   min-height:92vh;
@@ -178,7 +169,6 @@ h1,h2,h3{ font-family:var(--display); font-weight:600; margin:0; color:var(--ind
   color:#fff; opacity:0.92;
 }
 
-/* Distance illustration: two pins joined by a dashed flight path */
 .distance-map{
   margin:36px auto 0;
   max-width:360px;
@@ -251,7 +241,7 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
 #confetti-canvas{ position:fixed; inset:0; z-index:60; pointer-events:none; }
 
 /* ================================================================
-   BUTTONS (shared) — soft pastel gradient pills
+   BUTTONS
    ================================================================ */
 .btn{
   appearance:none; border:none; cursor:pointer; font-family:var(--display); font-weight:600;
@@ -281,41 +271,87 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
 .thought-card .btn{ margin-top:18px; }
 
 /* ================================================================
-   MEMORY VAULT (photo grid)
+   MEMORY VAULT (PHOTO GRID)
    ================================================================ */
-.memory-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
-@media (max-width:720px){ .memory-grid{ grid-template-columns:repeat(2, 1fr); gap:16px; } }
-@media (max-width:480px){ 
-  .memory-grid{ 
-    grid-template-columns:repeat(2, 1fr); 
-    gap:12px; 
-    max-width:100%; 
-    margin:0 auto; 
-  } 
+.memory-grid{ 
+  display:grid; 
+  grid-template-columns:repeat(3, 1fr); 
+  gap:18px; 
 }
+
 .memory-tile{
-  position:relative; border-radius:var(--radius-md); overflow:hidden;
-  box-shadow:0 12px 28px -14px rgba(80,70,130,0.35); cursor:pointer;
-  border:4px solid #fff; background:#fff;
+  position:relative; 
+  border-radius:var(--radius-md); 
+  overflow:hidden;
+  box-shadow:0 12px 28px -14px rgba(80,70,130,0.35); 
+  cursor:pointer;
+  border:4px solid #fff; 
+  background:#fff;
+  display:flex;
+  flex-direction:column;
 }
-.memory-photo{ aspect-ratio:4/5; overflow:hidden; }
-.memory-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.5s ease; }
-.memory-tile:hover .memory-photo img, .memory-tile:focus-within .memory-photo img{ transform:scale(1.06); }
+
+.memory-photo{ 
+  width:100%;
+  aspect-ratio:4/5; 
+  overflow:hidden; 
+}
+
+.memory-photo img{ 
+  width:100%; 
+  height:100%; 
+  object-fit:cover; 
+  display:block; 
+  transition:transform 0.5s ease; 
+}
+
+.memory-tile:hover .memory-photo img, 
+.memory-tile:focus-within .memory-photo img{ 
+  transform:scale(1.06); 
+}
+
 .memory-caption{
   padding:10px 8px 14px;
   text-align:center;
   background:#fff;
   color:var(--indigo);
   font-family:var(--display);
-  font-size:0.82rem;
+  font-size:0.85rem;
   font-weight:600;
   line-height:1.3;
-}
-@media (max-width:480px){
-  .memory-caption{ font-size:0.8rem; padding:8px 4px 12px; }
+  margin-top:auto;
 }
 
-/* ---------- Tap-to-enlarge polaroid popup ---------- */
+/* Tablet Layout */
+@media (max-width:720px){ 
+  .memory-grid{ 
+    grid-template-columns:repeat(2, 1fr); 
+    gap:14px; 
+  } 
+}
+
+/* Mobile Layout: 2 equal columns x 3 rows */
+@media (max-width:480px){
+  .memory-grid{ 
+    grid-template-columns:repeat(2, 1fr); 
+    gap:10px; 
+    padding:0;
+    max-width:100%; 
+    margin:0 auto; 
+  }
+
+  .memory-photo{
+    height:160px; /* Fixed height so all 6 cards are perfectly equal */
+    aspect-ratio: auto;
+  }
+
+  .memory-caption{ 
+    font-size:0.78rem; 
+    padding:8px 4px; 
+  }
+}
+
+/* Tap-to-enlarge polaroid popup */
 .memory-lightbox{
   position:fixed; inset:0; z-index:75;
   display:none; align-items:center; justify-content:center;
@@ -391,7 +427,7 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
 .spotify-slot{ margin-top:28px; border-radius:16px; overflow:hidden; }
 
 /* ================================================================
-   PASSWORD GATE (surprise.html — shown first)
+   PASSWORD GATE
    ================================================================ */
 .password-gate{
   min-height:65vh;
@@ -412,7 +448,6 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
 }
 #password-input:focus{ border-color:#E58AB5; }
 
-/* PIN dots */
 .pin-display{
   display:flex; justify-content:center; gap:16px;
   margin:22px 0 24px;
@@ -435,7 +470,6 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
   75%{ transform:translateX(8px); }
 }
 
-/* PIN keypad */
 .pin-keypad{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -485,7 +519,7 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
 .main-content.show{ opacity:1; max-height:none; overflow:visible; }
 
 /* ================================================================
-   CAT + BOUQUET (final surprise page)
+   CAT + BOUQUET
    ================================================================ */
 .bouquet-section .section-head p{ max-width:520px; }
 .cat-bouquet-card{ display:flex; justify-content:center; margin-top:8px; }
@@ -606,9 +640,6 @@ body:not(.locked) #lock-overlay{ opacity:0; pointer-events:none; }
   0%{ transform:scale(0) rotate(-8deg); opacity:0; }
   60%{ transform:scale(1.25) rotate(4deg); opacity:1; }
   100%{ transform:scale(1) rotate(0deg); opacity:1; }
-}
-@media (prefers-reduced-motion: reduce){
-  .bday-message.show .pop-word{ animation:none; transform:scale(1); opacity:1; }
 }
 
 footer.page-footer{ text-align:center; padding:60px 24px 40px; color:var(--indigo-soft); font-size:0.9rem; position:relative; z-index:3; }
